@@ -16,6 +16,7 @@ html {
 
 body {
     background-color: black;
+    color: white;
 }
 
 #header {
@@ -45,7 +46,6 @@ body {
 li {
     list-style: none;
 }
-
 
 .nav-link {
     text-decoration: none;
@@ -79,24 +79,82 @@ li {
 }
 
 
-#products {
+#products,
+#videos,
+#contact-us {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
 }
 
-.product {
+#about-us {
+    margin: 20;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: white;
+    color: black;
+    width: 20%;
+    height: 500px;
+    border-radius: 3;
+}
+
+input {
+    padding: 5px;
+    margin-bottom: 30;
+}
+
+#submit {
+    width: 100%;
+}
+
+.contact-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-title {
+    margin-bottom: 20px;
+    font-size: 2rem;
+}
+
+.about-us-text {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.about-us-text p {
+    margin: 20px;
+    text-align: left;
+    width: 45%;
+}
+
+
+.product,
+.product-demo {
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
     width: calc(100% / 5);
     border: 2px solid white;
+    position: relative;
 }
 
 .product-text {
     color: white;
     margin: 20px;
+}
+
+.product-text p {
+    position: absolute;
+    bottom: 5px;
+    left: 10px;
+    color: white;
 }
 
 .bold {
@@ -121,16 +179,26 @@ li {
     object-fit: cover;
 }
 
-.nav-link:hover {
+
+a:hover {
     background-color: white;
     color: black;
     transition: 0.3s;
 }
 
+#products a {
+    font-size: 1rem;
+}
+
+
 .product img:hover {
     cursor: pointer;
     opacity: 0.5;
     transition: 0.3s;
+}
+
+.product-demo {
+    padding-top: 10px;
 }
 
 .btn:hover {
@@ -148,4 +216,118 @@ li {
     cursor: pointer;
     border: 2px solid white;
     text-transform: uppercase;
+}
+
+@media (max-width: 768px) {
+
+    #header {
+        padding: 0 10px;
+    }
+
+    .logo {
+        width: 40vw;
+    }
+
+    #nav-list {
+        width: 50vw;
+    }
+
+    .nav-link {
+        font-size: 1rem;
+    }
+
+
+    #hero {
+        height: 400px;
+        margin-bottom: 50px;
+    }
+
+    .title {
+        font-size: 3.5rem;
+    }
+
+    .subtitle {
+        font-size: 1.5rem;
+    }
+
+
+    .product,
+    .product-demo {
+        width: 100%;
+        margin-bottom: 30px;
+    }
+
+    .product img {
+        height: 300px;
+    }
+
+    .product-text p {
+        font-size: 0.8rem;
+    }
+
+    .price {
+        font-size: 2.5rem;
+    }
+
+    .btn {
+        height: 30px;
+        width: 80px;
+        font-size: 0.8rem;
+    }
+}
+
+
+
+@media (max-width: 480px) {
+
+    .logo {
+        width: 30vw;
+    }
+
+    #nav-list {
+        width: 60vw;
+    }
+
+
+    #hero {
+        height: 300px;
+        margin-bottom: 30px;
+    }
+
+    .title {
+        font-size: 3rem;
+    }
+
+    .subtitle {
+        font-size: 1.2rem;
+    }
+
+
+    .product img {
+        height: 250px;
+    }
+
+    .price {
+        font-size: 2rem;
+    }
+
+    .btn {
+        height: 25px;
+        width: 70px;
+        font-size: 0.7rem;
+    }
+
+
+    .contact-form {
+        width: 90%;
+        height: auto;
+    }
+
+    input {
+        margin-bottom: 20px;
+    }
+
+    #submit {
+        width: 100%;
+    }
 }
