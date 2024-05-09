@@ -1,10 +1,13 @@
 # product-landing-page
-Ibanez Electric Guitars Website (Personal Project) using HTML and CSS. 
+FreeCodeCamp.com Responsive Web Design Certification Project - "Build A Product Landing Page"
+
+https://www.freecodecamp.org/learn/responsive-web-design/responsive-web-design-projects/build-a-product-landing-page
+
+
+
+
+Demo: https://armen-asriyan.github.io/product-landing-page/
+
 
 All images and trademarks associated with Ibanez guitars belong to their respective owners.
 No copyright infringement is intended.
-
-
-(WORK IN PROGRESS)
-
-https://armen-asriyan.github.io/product-landing-page/
