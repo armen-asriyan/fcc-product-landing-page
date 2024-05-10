@@ -5,7 +5,7 @@ https://www.freecodecamp.org/learn/responsive-web-design/responsive-web-design-p
 
 
 
-Demo: https://armen-asriyan.github.io/product-landing-page/
+Demo: https://armen-asriyan.github.io/fcc-product-landing-page/
 
 
 All images and trademarks associated with Ibanez guitars belong to their respective owners.
