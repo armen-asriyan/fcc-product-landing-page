@@ -19,6 +19,18 @@ body {
     color: white;
 }
 
+@keyframes jump {
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-5px);
+    }
+}
+
+
 #header {
     position: fixed;
     top: 0;
@@ -31,10 +43,50 @@ body {
     z-index: 1000;
 }
 
+a:not(.nav-link2):hover {
+    background-color: white;
+    color: black;
+    transition: 0.3s;
+}
+
+#footer {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    text-align: center;
+    overflow: hidden;
+}
+
+.footer-text {
+    margin-bottom: 40px;
+}
+
+.nav-link2 {
+    color: white;
+    text-decoration: none;
+    margin-bottom: 10px;
+}
+
+.ibanez-official-link {
+    color: white;
+    text-decoration: underline;
+}
+
+.footer-arrow {
+    font-size: 2rem;
+    overflow: hidden;
+}
+
+.arrow {
+    width: fit-content;
+}
+
+.arrow:hover {
+    animation: jump 1s infinite;
+}
+
 .logo {
     width: 55vw;
 }
-
 
 #nav-list {
     width: 40vw;
@@ -58,7 +110,7 @@ li {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-bottom: 100px;
+    margin-bottom: 50px;
     justify-content: center;
     background: linear-gradient(rgb(0 0 0 / 50%), rgb(0 0 0 / 50%)), url("https://www.ibanez.com/images/index/mainSlide/top_GRG.jpg");
     background-position: bottom;
@@ -84,10 +136,12 @@ li {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
+    padding-top: 101px;
 }
 
 #about-us {
     margin: 20px;
+    padding-top: 50px;
 }
 
 #contact-us {
@@ -114,8 +168,6 @@ fieldset {
 }
 
 
-
-
 input {
     margin: 20px 20px 20px auto;
     width: 100%;
@@ -126,15 +178,15 @@ input {
 
 
 .about-us-text {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    border-top: 2px solid white; 
+    border-bottom: 2px solid white;
 }
 
 .about-us-text p {
     margin: 20px;
     text-align: left;
-    width: 45%;
 }
 
 .about-us-wrapper {
@@ -162,7 +214,6 @@ iframe {
     width: fit-content;
     border: 2px solid white;
     position: relative;
-    max-height: 100%;
 }
 
 .product-text {
@@ -191,32 +242,24 @@ iframe {
 
 
 .specifications {
-    min-width: 350px;
+    min-width: 50%;
 }
 
 .price {
     font-size: 3.5rem;
-    margin-bottom: 40px;
-    margin-top: 40px;
+    margin-bottom: 100px;
 }
 
-.product img {
+.product img:not(.thomann-logo) {
     width: 100%;
     height: 400px;
     object-fit: cover;
 }
 
 
-a:hover {
-    background-color: white;
-    color: black;
-    transition: 0.3s;
-}
-
 #products a {
     font-size: 1rem;
 }
-
 
 .product img:hover {
     cursor: pointer;
@@ -224,15 +267,21 @@ a:hover {
     transition: 0.3s;
 }
 
-
 .button-container {
     position: absolute;
-    bottom: 0;
-    margin: 20px;
+    bottom: 40px;
+    margin: 30px;
     height: 40px;
     width: 100px;
     border: none;
 }
+
+.thomann-logo {
+    height: 100%;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
 
 .btn {
     color: white;
@@ -243,6 +292,7 @@ a:hover {
     border: 2px solid white;
     text-transform: uppercase;
 }
+
 
 .btn:hover {
     background-color: white;
